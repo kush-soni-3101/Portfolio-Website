@@ -1,0 +1,172 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Audiowide', cursive;
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+}
+
+
+body {
+  background: linear-gradient(to right, #0f0f1f, #020211);
+  color: #00f7ff;
+}
+
+
+canvas#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #00f7ff;
+  border: 2px solid #00f7ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.toggle-btn:hover {
+  background-color: #00f7ff;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 8px #00f7ff;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.project {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00f7ff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.project:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 35px #00f7ff;
+}
+
+.project h2 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #00f7ff;
+  color: #000;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #00f7ff;
+  border: 2px solid #00f7ff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00f7ff;
+  color: #000;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb);
+  color: #1f1f1f;
+}
+
+body.light-mode .toggle-btn {
+  background-color: #fff;
+  color: #222;
+  border-color: #444;
+}
+
+body.light-mode h1 {
+  color: #1f1f1f;
+  text-shadow: none;
+}
+
+body.light-mode .project {
+ background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+  border: 1px solid #ccc;
+  color: #111;
+  box-shadow: 0 12px 30px rgba(170, 170, 255, 0.25);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode .project:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 20px 20px 20px rgba(140, 170, 255);
+}
+
+body.light-mode .project h2,
+body.light-mode .project a,
+body.light-mode .btn {
+  color: #222;
+  border-color: #666;
+}
+
+body.light-mode .project a:hover,
+body.light-mode .btn:hover {
+  background-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 12px #38bdf8;
+}

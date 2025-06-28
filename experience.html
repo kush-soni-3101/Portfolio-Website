@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience - Kush Soni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Audiowide', cursive;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+     
+      background: linear-gradient(to right, #0f0f1f, #020211);
+      color: #00f7ff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.5s, color 0.5s;
+      position: relative;
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: rgba(0, 255, 255, 0.1);
+      color: #00f7ff;
+      border: 2px solid #00f7ff;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+      z-index: 2;
+    }
+
+    .toggle-btn:hover {
+      background-color: #00f7ff;
+      color: #000;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 2.5rem;
+      text-shadow: 0 0 8px #00f7ff;
+      z-index: 1;
+    }
+
+    .experience-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      z-index: 1;
+    }
+
+    .experience {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid #00f7ff;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .experience:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 40px #00f7ff;
+      
+    }
+
+    .experience h2 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .experience p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #00f7ff;
+      border: 1px solid #00f7ff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00f7ff;
+      color: #000;
+      box-shadow: 0 0 10px #00f7ff;
+    }
+
+    /* Light Mode Styles */
+    body.light-mode {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb);
+      color: #1f1f1f;
+    }
+
+    body.light-mode .experience {
+      background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+      color: #1a1a1a;
+      border: 2px solid #7f9cf5;
+      box-shadow: 0 12px 30px rgba(127, 156, 245, 0.4);
+    }
+
+
+    body.light-mode .btn {
+      background-color: #e0f2fe;
+      color: #0c4a6e;
+      border: 1px solid #38bdf8;
+    }
+
+    body.light-mode .btn:hover {
+      background-color: #38bdf8;
+      color: #fff;
+      box-shadow: 0 0 12px #38bdf8;
+
+    }
+
+    body.light-mode .toggle-btn {
+      background-color: #c2e9fb;
+      color: #0c4a6e;
+      border: 1px solid #38bdf8;
+    }
+
+      body.light-mode .toggle-btn:hover {
+      cursor: pointer;
+      background-color: #7f9cf5;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+
+
+
+  <h1>My Experience</h1>
+
+  <div class="experience-container">
+    <div class="experience">
+      <h2>Aspiring Developer</h2>
+      <p><strong>Duration:</strong> Present</p>
+      <p>Though I haven't held any formal role yet, I've consistently applied my knowledge through academic assignments and personal projects. I focus on writing clean, efficient code and building practical solutions while continuously expanding my skill set. I'm passionate about learning and eager to contribute to real-world projects.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="btn"> Back to Homepage</a>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script src="background.js"></script> 
+
+</body>
+</html>
