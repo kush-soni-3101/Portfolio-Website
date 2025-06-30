@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Audiowide', cursive;
+  font-family: 'Audiowide';
   background: linear-gradient(to right, #0f0f1f, #020211);
   color: #00f7ff;
   display: flex;
