@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -16,24 +17,9 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  
 }
 
-#particles, #starsCanvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-}
-
-#starsCanvas {
-  display: none; /* Only visible in light mode */
-}
-
-
-canvas#particles {
+#particles, #starsCanvas, canvas#particles {
   position: fixed;
   top: 0;
   left: 0;
@@ -41,6 +27,10 @@ canvas#particles {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
+}
+
+#starsCanvas {
+  display: none;
 }
 
 .toggle-btn {
@@ -63,10 +53,11 @@ canvas#particles {
   color: #000;
 }
 
+
 .flip-card {
-  background-color: transparent;
-  width: 350px;
-  height: 400px;
+  width: 90%;
+  max-width: 350px;
+  aspect-ratio: 7 / 8;
   perspective: 1000px;
   animation: fadeSlideUp 1s ease-out;
   z-index: 1;
@@ -75,6 +66,7 @@ canvas#particles {
   align-items: center;
   text-align: center;
 }
+
 
 .flip-card-inner {
   position: relative;
@@ -87,6 +79,7 @@ canvas#particles {
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
 
 .flip-card-front,
 .flip-card-back {
@@ -181,27 +174,20 @@ body.light-mode .project:hover {
   box-shadow: 0 0 40px rgba(120, 160, 255, 0.4);
 }
 
-
-
-/* Flip Cards */
 body.light-mode .flip-card-front,
 body.light-mode .flip-card-back {
-  background: linear-gradient(135deg, #8ec5fc, #e0c3fc); /* Real aesthetic gradient */
+  background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
   color: #1a1a1a;
   border: 2px solid #7f9cf5;
   box-shadow: 0 12px 30px rgba(127, 156, 245, 0.4);
   border-radius: 16px;
 }
 
-
-
-/* Text */
 body.light-mode .flip-card-front h2,
 body.light-mode .flip-card-front p {
   color: #333;
 }
 
-/* Buttons */
 body.light-mode .btn {
   background-color: #e0f2fe;
   color: #0c4a6e;
@@ -214,8 +200,6 @@ body.light-mode .btn:hover {
   box-shadow: 0 0 12px #38bdf8;
 }
 
-
-/* Toggle Button */
 body.light-mode .toggle-btn {
   background-color: #c2e9fb;
   color: #0c4a6e;
@@ -223,3 +207,36 @@ body.light-mode .toggle-btn {
 }
 
 
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toggle-btn {
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .flip-card {
+    width: 95%;
+    max-width: 300px;
+    aspect-ratio: 7 / 8;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 8px;
+  }
+}
