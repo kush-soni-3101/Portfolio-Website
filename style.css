@@ -99,8 +99,9 @@ body {
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #00f7ff;
+ 
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 40px #00f7ff; 
 }
 
 
@@ -162,8 +163,8 @@ body.light-mode .flip-card-back {
 }
 
 body.light-mode .flip-card-front .profile-pic {
-  border: 2px solid #7f9cf5;
-  box-shadow: 0 0 10px rgba(127, 156, 245, 0.5);
+  border: 0px solid #7f9cf5;
+  box-shadow: 0 0px 40px #0707e6;
 }
 
 body.light-mode .flip-card-front h2,
