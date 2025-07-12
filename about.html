@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Kush Soni</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Audiowide', cursive;
+      background: linear-gradient(to right, #0f0f1f, #020211);
+      color: #00f7ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      position: relative;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00f7ff;
+      z-index: 1;
+      transition: color 0.5s;
+    }
+
+    .section {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #00f7ff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      transition: 0.4s;
+      z-index: 1;
+    }
+
+    .section:hover {
+      box-shadow: 0 0 40px #00f7ff;
+      transform: scale(1.02);
+    }
+
+    .section i {
+      font-size: 28px;
+      color: #00f7ff;
+      margin-right: 20px;
+      min-width: 30px;
+      transition: color 0.5s;
+    }
+
+    .section-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-content h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #0ff;
+      transition: color 0.5s;
+    }
+
+    .section-content p {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #ffffffcc;
+      transition: color 0.5s;
+    }
+
+    .social-icons {
+      margin: 40px 0 20px;
+      display: flex;
+      gap: 50px;
+      z-index: 1;
+    }
+
+    .social-icons a {
+      color: #00f7ff;
+      font-size: 40px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #0ff;
+      transform: scale(1.2);
+    }
+
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 30px;
+      background-color: transparent;
+      color: #00f7ff;
+      border: 1px solid #00f7ff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      background-color: #00f7ff;
+      color: black;
+      box-shadow: 0 0 10px #00f7ff;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: rgba(0, 255, 255, 0.1);
+      color: #00f7ff;
+      border: 2px solid #00f7ff;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: 2;
+    }
+
+    .toggle-btn:hover {
+      background-color: #00f7ff;
+      color: #000;
+    }
+
+    /* Light Mode Styling */
+
+       canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body.light-mode {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb);
+      color: #1f1f1f;
+      
+    }
+
+    body.light-mode .btn {
+      background-color: #e0f2fe;
+      color: #0c4a6e;
+      border: 1px solid #38bdf8;
+    }
+
+    body.light-mode .btn:hover {
+      background-color: #38bdf8;
+      color: #fff;
+      box-shadow: 0 0 12px #38bdf8;
+    }
+
+    body.light-mode h1 {
+      color: #003366;
+      text-shadow: none;
+    }
+
+    body.light-mode .section {
+       background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+      border-color: #0077ff;
+      color: #111;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .section:hover {
+      box-shadow: 0 0 30px rgba(0, 119, 255, 0.4);
+    }
+
+    body.light-mode .section i {
+      color: #0077ff;
+    }
+
+    body.light-mode .section-content h2 {
+      color: #003366;
+    }
+
+    body.light-mode .section-content p {
+      color: #111111;
+      font-size: 1.3rem;
+    }
+
+    body.light-mode .social-icons a {
+      color: #0077ff;
+    }
+
+    body.light-mode .social-icons a:hover {
+      color: #0055aa;
+    }
+
+    body.light-mode .hire-btn {
+      color: #003366;
+      border-color: #0077ff;
+      box-shadow: 0 0 12px rgba(0, 119, 255, 0.3);
+    }
+
+    body.light-mode .hire-btn:hover {
+      background-color: #0077ff;
+      color: #fff;
+      box-shadow: 0 0 20px #0077ff;
+    }
+
+    body.light-mode .toggle-btn {
+      background-color: rgba(0, 119, 255, 0.1);
+      color: #003366;
+      border-color: #0077ff;
+    }
+
+    body.light-mode .toggle-btn:hover {
+      background-color: #0077ff;
+      color: #fff;
+      
+    }
+
+    .section-content .value {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  
+}
+
+.section:hover .label {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  
+}
+
+.section:hover .value {
+  opacity: 2;
+  height: auto;
+  overflow: visible;
+}
+
+.section-content .label,
+.section-content .value {
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+  </style>
+</head>
+
+<body>
+  
+  <canvas id="particles"></canvas>
+
+  <h1>About Me</h1>
+
+  <div class="section">
+  <i class="fas fa-user"></i>
+  <div class="section-content">
+    <h2 class="label">Name</h2>
+    <p class="value">Kush Soni</p>
+  </div>
+</div>
+
+<div class="section">
+  <i class="fa-solid fa-user-graduate"></i>
+  <div class="section-content">
+    <h2 class="label">Education</h2>
+    <p class="value">B.Tech – 2nd Year, Computer Science</p>
+  </div>
+</div>
+
+<div class="section">
+  <i class="fas fa-venus-mars"></i>
+  <div class="section-content">
+    <h2 class="label">Gender</h2>
+    <p class="value">Male</p>
+  </div>
+</div>
+
+<div class="section">
+  <i class="fa-solid fa-phone"></i>
+  <div class="section-content">
+    <h2 class="label">Phone Number</h2>
+    <p class="value">+91-8153093101</p>
+  </div>
+</div>
+
+
+  <div class="social-icons">
+    <a href="https://mail.google.com/mail/?view=cm&to=kushsonni@gmail.com" target="_blank" aria-label="Gmail">
+      <i class="fa-solid fa-g"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/kush-soni-904b66361/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://wa.me/918153093101?text=Hello%20Kush%20Soni" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://github.com/kush-soni-3101" target="_blank" aria-label="WhatsApp">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+
+ <a href="index.html" class="btn"> Back to Homepage</a>
+
+  <script src = "script.js"></script>
+</body>
+</html>
